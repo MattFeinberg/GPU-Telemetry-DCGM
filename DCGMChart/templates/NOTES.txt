@@ -1,0 +1,13 @@
+Prometheus and Grafana have been deployed and integrated with DCGM
+
+Prometheus is accessible at: http://<machine-IP>:30090
+
+Grafana is accessible at: http://<machine-IP>:32322
+    - Username: admin
+    - Password: admin
+    - Find MIG dashboard by navigating to Dashboards>General
+
+NOTE: It may take a few mintues for DCGM metrics to become available
+
+
+
