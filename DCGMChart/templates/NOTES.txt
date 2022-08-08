@@ -5,7 +5,8 @@ Prometheus is accessible at: http://<machine-IP>:30090
 Grafana is accessible at: http://<machine-IP>:32322
     - Username: admin
     - Password: admin
-    - Find MIG dashboard by navigating to Dashboards>General
+    - Visit github repo for dashboard imports:
+      https://github.com/MattFeinberg/GPU-Telemetry-DCGM
 
 NOTE: It may take a few mintues for DCGM metrics to become available
 
