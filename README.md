@@ -13,6 +13,7 @@ This helm chart offers an easy deployment for GPU Telemetry on a Kubernetes Clus
 <p align="left">
 After installation, you can import various grafana dashboards to visualize GPU metrics. The JSON files containing the dashboards are availible in the repository in the dashboards folder, and the dashboards are availilbe for import here:
 </p>
+
 [Standard Dashboard](https://grafana.com/grafana/dashboards/12239)
 
 [MIG Dashboard](https://grafana.com/grafana/dashboards/16640-nvidia-mig-dcgm-exporter-dashboard)
