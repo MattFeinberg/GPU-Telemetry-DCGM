@@ -102,7 +102,7 @@
         {
           "expr": "DCGM_FI_PROF_GR_ENGINE_ACTIVE{instance=~\"${instance}\", gpu=~\"${gpu}\"}",
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -192,7 +192,7 @@
         {
           "expr": "DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} / (DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} + DCGM_FI_DEV_FB_FREE{instance=~\"${instance}\", gpu=~\"${gpu}\"}) * 100",
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -282,7 +282,7 @@
         {
           "expr": "DCGM_FI_PROF_PIPE_TENSOR_ACTIVE{instance=~\"${instance}\", gpu=~\"${gpu}\"}",
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -376,7 +376,7 @@
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -468,7 +468,7 @@
           "expr": "DCGM_FI_DEV_GPU_TEMP{instance=~\"${instance}\", gpu=~\"${gpu}\"}",
           "instant": false,
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -565,7 +565,7 @@
         {
           "expr": "avg(DCGM_FI_DEV_GPU_TEMP{instance=~\"${instance}\", gpu=~\"${gpu}\"})",
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -620,7 +620,7 @@
         {
           "expr": "DCGM_FI_DEV_POWER_USAGE{instance=~\"${instance}\", gpu=~\"${gpu}\"}",
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
@@ -720,7 +720,7 @@
         {
           "expr": "sum(DCGM_FI_DEV_POWER_USAGE{instance=~\"${instance}\", gpu=~\"${gpu}\"})",
           "interval": "",
-          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
           "refId": "A"
         }
       ],
