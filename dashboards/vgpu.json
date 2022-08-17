@@ -189,7 +189,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} / (DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} + DCGM_FI_DEV_FB_FREE{instance=~\"${instance}\", gpu=~\"${gpu}\"})",
+          "expr": "DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} / (DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} + DCGM_FI_DEV_FB_FREE{instance=~\"${instance}\", gpu=~\"${gpu}\"}) * 100",
           "interval": "",
           "legendFormat": "{{modelName}} GPU ID: {{gpu}}",
           "refId": "A"
