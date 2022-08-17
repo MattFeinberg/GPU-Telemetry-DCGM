@@ -157,14 +157,15 @@
       "gridPos": {
         "h": 8,
         "w": 12,
-        "x": 12,
+        "x": 0,
         "y": 8
       },
       "hiddenSeries": false,
       "id": 18,
       "legend": {
+        "alignAsTable": true,
         "avg": true,
-        "current": false,
+        "current": true,
         "max": true,
         "min": false,
         "rightSide": true,

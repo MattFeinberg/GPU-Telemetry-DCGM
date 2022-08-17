@@ -164,8 +164,9 @@
       "hiddenSeries": false,
       "id": 18,
       "legend": {
+        "alignAsTable": true,
         "avg": true,
-        "current": false,
+        "current": true,
         "max": true,
         "min": false,
         "rightSide": true,
@@ -189,7 +190,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"}",
+          "expr": "DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} / (DCGM_FI_DEV_FB_USED{instance=~\"${instance}\", gpu=~\"${gpu}\"} + DCGM_FI_DEV_FB_FREE{instance=~\"${instance}\", gpu=~\"${gpu}\"})",
           "interval": "",
           "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}}",
           "refId": "A"
@@ -215,11 +216,11 @@
       },
       "yaxes": [
         {
-          "format": "decmbytes",
+          "format": "percent",
           "label": null,
           "logBase": 1,
-          "max": null,
-          "min": null,
+          "max": 100,
+          "min": 0,
           "show": true
         },
         {
