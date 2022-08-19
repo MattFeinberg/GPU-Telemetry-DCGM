@@ -608,7 +608,7 @@
       "gridPos": {
         "h": 8,
         "w": 6,
-        "x": 4,
+        "x": 3,
         "y": 32
       },
       "id": 14,
@@ -761,7 +761,7 @@
       "gridPos": {
         "h": 8,
         "w": 6,
-        "x": 12,
+        "x": 15,
         "y": 24
       },
       "id": 16,
@@ -818,6 +818,87 @@
       "timeShift": null,
       "title": "GPU Power Total",
       "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "links": [],
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "green",
+                  "index": 0,
+                  "text": "Licensed"
+                },
+                "1": {
+                  "color": "red",
+                  "index": 1,
+                  "text": "Unlicensed"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "expr": "DCGM_FI_DEV_VGPU_LICENSE_STATUS{instance=~\"${instance}\", gpu=~\"${gpu}\"}",
+          "interval": "",
+          "legendFormat": "{{modelName}} GPU ID: {{gpu}} Instance ID: {{GPU_I_ID}} Profile: {{GPU_I_PROFILE}}",
+          "refId": "A"
+        }
+      ],
+      "title": "vGPU Liscense Status",
+      "type": "stat"
     }
   ],
   "refresh": false,
